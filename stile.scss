@@ -1,0 +1,103 @@
+@import "colori";
+@import "mixins";
+@import "tipografia";
+@import "animation";
+
+#cont{
+    background-color: $coloreSfondo;
+    color:$coloreBianco;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    font-family: $font;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    img {
+        width: 10%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+}
+
+ul{
+    flex-basis: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10%;
+    margin-top: 7%;
+    font-weight: bold;
+    font-size: $fontMedio;
+    li{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+#contMain{
+    display: flex;
+    padding-top: 3%;
+}
+h1{
+    color: $coloreH1;
+    font-size: $fontTitolo;
+    font-weight: bold; 
+}
+#contText{
+    flex-basis: 40%;
+    margin-left: 4%;
+    margin-right: 2%;
+    p{
+        line-height: $interlinea;
+        font-size: $fontGrande;
+    }
+}
+#contFoto{
+    flex-basis: 50%;
+    @include ingressoFoto;
+    img{
+        width: 100%;
+        border-radius: 30px;
+        border: 2px solid $coloreBordoImgGrande;
+    }
+}
+#contBtn{
+    button{
+        &:hover{
+            cursor: pointer;
+            @include pulse;
+        }
+    }
+}
+#btn1{
+    background-color: $coloreBtn1;
+    @include pulsante;
+}
+#btn2{
+    background-color: $coloreBtn2;
+    @include pulsante;
+}
+#btn3{
+    background-color: $coloreBtn3;
+    @include pulsante;
+}
+#contBottomFoto{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $coloreFooter;
+    padding-top: 2%;
+}
+.card{
+    flex-basis: 23%;
+    img{
+        width: 100%;
+        border-radius: 30px;
+        border: 2px solid $coloreBordoImgFooter;
+        &:hover{
+            cursor: pointer;
+            @include pulse;
+        }
+    }
+}
